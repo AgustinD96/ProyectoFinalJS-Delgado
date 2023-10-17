@@ -1,0 +1,69 @@
+{
+    "productos": [
+        {
+            "nombre": "Cuencos",
+            "precio": 3.500,
+            "descripcion": "Cuencos de ceramica"
+        },
+        {
+            "nombre": "Maceta",
+            "precio": 2.000,
+            "descripcion": "Maceta de ceramica"
+        },
+        {
+            "nombre": "Platos",
+            "precio": 1.500,
+            "descripcion": "Platos de ceramica"
+        },
+        {
+            "nombre": "Porta Maceta",
+            "precio": 1.200,
+            "descripcion": "Porta Maceta"
+        },
+        {
+            "nombre": "Combo Acuarela Negro",
+            "precio": 3.000,
+            "descripcion": "Color Negro"
+        },
+        {
+            "nombre": "Combo Acuarela Rojo",
+            "precio": 3.000,
+            "descripcion": "Color Rojo"
+        },
+        {
+            "nombre": "Set",
+            "precio": 4.000,
+            "descripcion": "Cuencos y Plato"
+        },
+        {
+            "nombre": "Tazas Chinas",
+            "precio": 2.600,
+            "descripcion": "Tazas Chinas"
+        },
+        {
+            "nombre": "Tazas",
+            "precio": 1.500,
+            "descripcion": "Tazas Bambu"
+        },
+        {
+            "nombre": "Producto 1",
+            "precio": 19.99,
+            "descripcion": "Descripción del Producto 1"
+        },
+        {
+            "nombre": "Tazas manchas",
+            "precio": 1.200,
+            "descripcion": "Tazas"
+        },
+        {
+            "nombre": "Combo",
+            "precio": 1.500,
+            "descripcion": "Taza y Plato"
+        },
+        {
+            "nombre": "Set Acuarela",
+            "precio": 2.600,
+            "descripcion": "Set de Cuencos Acuarela"
+        }
+    ]
+}

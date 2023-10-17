@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- referencia al archivo AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- referencia al archivo AOS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Script -->
+    <script src="js/index.js"></script>
+    <title>Cuencos que Cuentan</title>
+  </head>
+  <body>
+    <!-- Inicia Nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="barraNavegacion container-fluid">
+        <a class="navbar-brand" href="#"><img src="../Imagenes/Logos/Logo.jpeg"alt="Logo de Cuencos que Cuentan"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="botnesNavegacion collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="listaProductos dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Ver Todos los Productos</a>
+                  </li><hr>
+                  <li>
+                    <div class="btn-group">
+                     <button type="button" class="btn">Categorias</button>
+                     <button type="button" class="btn">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                     </button>
+                     <ul class="">
+                      <li><a class="dropdown-item" href="#">Tazas</a></li>
+                      <li><a class="dropdown-item" href="#">Platos</a></li>
+                      <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                      <li><a class="dropdown-item" href="#">Macetas</a></li>
+                      <li><a class="dropdown-item" href="#">Porta Macetas</a></li>
+                      <li><a class="dropdown-item" href="#">Lamparas</a></li>
+                      <li><a class="dropdown-item" href="#">Sets</a></li>
+                     </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cuidados Recomendados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Nosotras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+          </ul>
+          <form class="segundosBotones d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg></button>
+            <!-- Botón del carrito con contador -->
+            <button class="btn btn-primary position-relative" id="boton-carrito" onclick="scrollToFooter()">
+                Carrito
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cantidad-carrito">0</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin Nav -->
+    <!-- INICIAN PRODUCTOS -->
+    <!-- Contenedor para mostrar los datos del JSON -->
+    <div id="productos"></div>
+    <section data-aos="zoom-in" class="productosPagina">        
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Cuencos/IMG_20230716_180911154.jpg" class="card-img-top" alt="Cuencos $3.500">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Cuencos</h2>
+          <p class="card-text"><b>$3.500</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Cuencos" data-precio="3500">Agregar al Carrito</button>       
+        </div>
+      </div>       
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Macetas/6f18198c-f337-412c-9885-5942ee24e83d.jpeg" class="card-img-top" alt="Maceta $2.000">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Maceta</h2>
+          <p class="card-text"><b>$2.000</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Maceta" data-precio="2000">Agregar al Carrito</button>
+        </div>
+      </div>             
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Platos/aea18605-f78d-46ee-8bda-147ab7f4bf00.jpeg" class="card-img-top" alt="Platos $1.500">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Platos</h2>
+          <p class="card-text"><b>$1.500</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Platos" data-precio="1500">Agregar al Carrito</button>
+        </div>
+      </div>       
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Porta Macetas/IMG_20230716_183223496.jpg" class="card-img-top" alt="Porta Maceta $1.200">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Porta Maceta</h2>
+          <p class="card-text"><b>$1.200</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Porta Maceta" data-precio="1200">Agregar al Carrito</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Sets/Acuareala Negro/IMG_20230716_181158164.jpg" class="card-img-top" alt="Set 3 Cuencos $3.000">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Combo Acuarela Negro</h2>
+          <p class="card-text"><b>$3.000</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Combo Acuarela Negro" data-precio="3000">Agregar al Carrito</button>
+        </div>
+      </div>       
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Sets/Acuareala Rojo/IMG_20230716_181256786.jpg" class="card-img-top" alt="Set 3 Cuencos $3.000">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Combo Acuarela Rojo</h2>
+          <p class="card-text"><b>3.000</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Combo Acuarela Rojo" data-precio="3000">Agregar al Carrito</button>
+        </div>
+      </div>        
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Sets/Set Acuarela/IMG_20230716_181927300.jpg" class="card-img-top" alt="Set Cuencos y Plato $4.000">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Set Cuenco + Plato</h2>
+          <p class="card-text"><b>$4.000</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Set Cuenco + Plato" data-precio="4000">Agregar al Carrito</button>
+        </div>
+      </div>       
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Tazas Chinas/IMG_20230716_175653190.jpg" class="card-img-top" alt="Juego de Tazas Chinas $2.600">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Tazas Chinas</h2>
+          <p class="card-text"><b>$2.600</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Tazas Chinas" data-precio="2600">Agregar al Carrito</button>
+        </div>
+      </div>       
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Tazas/IMG_20230716_180439681.jpg" class="card-img-top" alt="Tazas Bambu $1.500">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Juego de Tazas Bambu</h2>
+          <p class="card-text"><b>$1.500</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Juego de Tazas Bambu" data-precio="1500">Agregar al Carrito</button>
+        </div>
+      </div>       
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Tazas/IMG_20230716_180720925.jpg" class="card-img-top" alt="Cuencos $1.200">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Juego de Tazas</h2>
+          <p class="card-text"><b>$1.200</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Juego de Tazas" data-precio="1200">Agregar al Carrito</button>
+        </div>
+      </div>        
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Tazas/IMG_20230716_181623412.jpg" class="card-img-top" alt="Taza + Plato $1.500">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Combo de Taza + Plato</h2>
+          <p class="card-text"><b>$1.500</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Combo de Taza + Plato" data-precio="1500">Agregar al Carrito</button>
+        </div>
+      </div>        
+      <div class="card" style="width: 18rem;">
+        <img src="../Imagenes/Productos/Sets/Set Acuarela/IMG_20230716_181841665.jpg" class="card-img-top" alt="Cuencos Acuarela">
+        <div class="card-body flexColumn">
+          <h2 class="card-title">Cuencos Acuarela</h2>
+          <p class="card-text"><b>2.600</b></p>
+          <button class="btn-agregar-carrito" data-nombre="Cuencos Acuarela" data-precio="2600">Agregar al Carrito</button>
+        </div>
+      </div>  
+      <div id="carrito-contenedor"></div>
+      <span id="cantidad-carrito"></span> <!-- mostrar la cantidad de productos en el carrito -->
+      <span id="total-compra"></span> <!--  mostrar el total de la compra -->
+    </section>
+    <!-- TERMINAN PRODUCTOS -->
+    <div class="card text-center">
+      <div class="card-header">
+        Detalles del Carrito
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Acciones</th> <!-- columna para las acciones -->
+            </tr>
+          </thead>
+          <tbody id="detalle-carrito-body">
+            <!-- productos en el carrito -->
+          </tbody>
+        </table>
+      </div>
+      <!-- monto total  -->
+      <div class="card-footer text-body-secondary">
+        <span id="total-compra-footer">Total: $0.00</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <h5>Opciones de Pago:</h5>
+      <label for="tipo-pago">Tipo de Pago:</label>
+      <select id="tipo-pago">
+        <option value="tarjeta">Tarjeta</option>
+        <option value="transferencia">Transferencia</option>
+      </select>
+      <div id="detalle-pago-tarjeta">
+        <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+        <select id="tipo-tarjeta">
+          <option value="debito">Débito</option>
+          <option value="credito">Crédito</option>
+        </select>
+        <label for="cuotas">Número de Cuotas:</label>
+        <select id="cuotas">
+          <option value="1">1 cuota</option>
+          <option value="3">3 cuotas</option>
+          <option value="6">6 cuotas</option>
+        </select>
+      </div>
+      <div id="valor-cuota"></div>
+      <button id="boton-pagar" class="btn btn-primary">Pagar</button>
+    </div>
+    
+    
+    <script> AOS.init();</script>
+   <!-- Script de BS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

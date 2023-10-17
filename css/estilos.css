@@ -1,0 +1,272 @@
+/* Estilo para el botón del carrito */
+#carrito-icono {
+    cursor: pointer;
+    /* Agrega otros estilos según tu diseño */
+  }
+  
+  /* Estilo para ocultar la lista de productos del carrito */
+  #carrito-productos {
+    display: none;
+    /* Agrega otros estilos según tu diseño */
+  }
+  
+  
+  .flexColumn, .paginaContacto .formasContacto, .paginaNosotros, .productosPagina .card .card-body, .introduccionCategorias, .carruselProductos .tarjetasProductosIndex .card-body, section .introduccionIndex {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .flexRow, .paginaContacto .formularioContacto, .filtrosProductos {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .btn,
+    button {
+      color: white;
+      background-color: rgb(66, 171, 52);
+      border-radius: 8px;
+      padding: 10px;
+      border: none;
+    }
+    
+    h1 {
+      font-size: 1.3;
+    }
+    
+    p {
+      font-size: 1em;
+      font-weight: 300;
+    }
+    
+    nav img {
+      width: 50px;
+    }
+    nav .botnesNavegacion ul a:hover {
+      background-color: rgb(66, 171, 52);
+      border-radius: 5px;
+      color: white;
+    }
+    nav .botnesNavegacion ul a:active {
+      background-color: rgb(66, 171, 52);
+    }
+    nav .listaProductos {
+      background-color: rgb(66, 171, 52);
+    }
+    nav .listaProductos li {
+      padding: 5px;
+    }
+    nav .segundosBotones input {
+      border: solid 3px rgb(66, 171, 52);
+    }
+    nav .segundosBotones .btn {
+      background-color: rgb(66, 171, 52);
+      border: solid 2px white;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    
+    header {
+      padding: 0 40px;
+    }
+    header .imagenesCarrusel1 img {
+      width: 100%;
+      height: 500px;
+    }
+    
+    section {
+      padding: 40px;
+    }
+    section .introduccionIndex {
+      align-items: center;
+      width: 100%;
+      background-color: rgb(66, 171, 52);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+    
+    footer {
+      background-color: rgb(66, 171, 52);
+      height: 60px;
+    }
+    footer div a img {
+      width: 50px;
+      padding: 5px;
+      margin-left: 15px;
+    }
+    
+    .filtrosProductos {
+      justify-content: space-between;
+      padding: 15px 98px;
+    }
+    .filtrosProductos .btn:hover {
+      background-color: rgb(16, 101, 46);
+    }
+    .filtrosProductos .btn:active {
+      background-color: rgb(16, 101, 46);
+    }
+    
+    .productosPagina {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .productosPagina .card {
+      cursor: pointer;
+    }
+    .productosPagina .card img {
+      height: 280px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .productosPagina .card .card-body {
+      align-items: center;
+    }
+    .productosPagina .card .card-body h2 {
+      font-size: larger;
+    }
+    .productosPagina .card .btn {
+      background-color: rgb(66, 171, 52);
+      border: none;
+    }
+    .productosPagina .card .btn:hover {
+      background-color: rgb(16, 101, 46);
+    }
+    
+    .IntroduccionCuidados {
+      background-color: rgb(66, 171, 52);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .IntroduccionCuidados h1, .IntroduccionCuidados p {
+      text-align: center;
+    }
+    
+    .accordion-header .botonAcordeon {
+      background-color: rgba(66, 171, 52, 0.5);
+      color: black;
+      display: flex;
+      flex-direction: row;
+    }
+    .accordion-header .botonAcordeon:active {
+      border-color: rgb(16, 101, 46);
+    }
+    .accordion-header .botonAcordeon img {
+      width: 40px;
+      padding: 5px;
+    }
+  
+    
+    @media (max-width: 575.98px) {
+      .encabezadoIndex {
+        padding: 0;
+      }
+      .encabezadoIndex .imagenesCarrusel1 {
+        height: 200px;
+      }
+      .encabezadoIndex .imagenesCarrusel1 img {
+        height: 200px;
+        width: 100%;
+      }
+      section {
+        padding: 10px;
+      }
+      section .introduccionIndex {
+        padding: 10px;
+        text-align: justify;
+      }
+      .carruselProductos {
+        padding: 10px;
+      }
+      .carruselProductos h2 {
+        text-align: center;
+      }
+      .carruselProductos .tarjetasProductosIndex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .carruselProductos .tarjetasProductosIndex .card {
+        margin-top: 5px;
+      }
+      .carruselProductos .tarjetasProductosIndex .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .carruselProductos .tarjetasProductosIndex .btn {
+        background-color: rgb(66, 171, 52);
+        border: none;
+        color: white;
+      }
+      .carruselProductos .tarjetasProductosIndex .btn:hover {
+        background-color: rgb(16, 101, 46);
+      }
+      .introduccionCategorias {
+        padding: 10px;
+        text-align: center;
+      }
+      .categoriasIndex {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+      }
+      .categoriasIndex .imagenesCategorias {
+        display: flex;
+        width: 250px;
+        margin-top: 10px;
+        margin-right: 50px;
+      }
+      .categoriasIndex .imagenesCategorias img {
+        width: 300px;
+        height: 180px;
+        object-fit: cover;
+      }
+      .categoriasIndex .imagenesCategorias .flaticonCategoria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .categoriasIndex .imagenesCategorias .flaticonCategoria img {
+        width: 150px;
+        height: 140px;
+        background-color: rgba(66, 171, 52, 0.5);
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .filtrosProductos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .filtrosProductos .desplegableFiltros {
+        margin-right: 56px;
+      }
+      .productosPagina figure .card {
+        border: none;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .paginaContacto {
+        padding: 5px;
+      }
+      .paginaContacto .introduccionContacto {
+        height: 250px;
+      }
+      .formularioContacto {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .formularioContacto .Mapa {
+        margin-top: 10px;
+      }
+    }
+    
